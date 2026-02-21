@@ -9,9 +9,13 @@ const education = [
     degree: "Bachelor of Science in Software Engineering",
     school: "Sindh Madressatul Islam University, Karachi",
     location: "Karachi, Pakistan",
-    duration: "2024 - 2028 (Expected)",
-    gpa: "3.1/4.0",
-    achievements: ["Dean's List", "Academic Excellence Award", "Programming Competition Finalist"]
+    duration: "2024 - 2028 (Expected)"
+  },
+  {
+    degree: "Intermediate in Pre-Engineering",
+    school: "D. J Sindh Govt Science College, Karachi",
+    location: "Karachi, Pakistan",
+    duration: "2019 - 2021"
   }
 ]
 
@@ -81,36 +85,25 @@ export default function About() {
             </CardHeader>
             <CardContent>
               {education.map((edu, index) => (
-                <div key={index} className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                    <p className="text-gray-600 font-medium">{edu.school}</p>
-                  </div>
-                  
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <MapPin className="w-4 h-4" />
-                      <span>{edu.location}</span>
+                <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white">
+                      <GraduationCap className="w-6 h-6" />
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Calendar className="w-4 h-4" />
-                      <span>{edu.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Award className="w-4 h-4" />
-                      <span>GPA: {edu.gpa}</span>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h5 className="font-medium mb-2">Achievements</h5>
-                    <div className="space-y-1">
-                      {edu.achievements.map((achievement, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
-                          <span>{achievement}</span>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-gray-800 mb-2">{edu.degree}</h4>
+                      <p className="text-gray-600 font-medium mb-4">{edu.school}</p>
+                      
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{edu.location}</span>
                         </div>
-                      ))}
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Calendar className="w-4 h-4" />
+                          <span className="text-sm">{edu.duration}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -120,22 +113,18 @@ export default function About() {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
           <Card className="text-center p-6 bg-gray-100">
             <div className="text-2xl font-bold text-blue-600 mb-1">10+</div>
             <div className="text-sm text-gray-600">Projects Completed</div>
           </Card>
           <Card className="text-center p-6 bg-gray-100">
-            <div className="text-2xl font-bold text-green-600 mb-1">3.8</div>
-            <div className="text-sm text-gray-600">GPA</div>
-          </Card>
-          <Card className="text-center p-6 bg-gray-100">
-            <div className="text-2xl font-bold text-purple-600 mb-1">5+</div>
-            <div className="text-sm text-gray-600">Technologies</div>
-          </Card>
-          <Card className="text-center p-6 bg-gray-100">
-            <div className="text-2xl font-bold text-orange-600 mb-1">2+</div>
+            <div className="text-2xl font-bold text-green-600 mb-1">2</div>
             <div className="text-sm text-gray-600">Years Experience</div>
+          </Card>
+          <Card className="text-center p-6 bg-gray-100">
+            <div className="text-2xl font-bold text-purple-600 mb-1">10+</div>
+            <div className="text-sm text-gray-600">Technologies</div>
           </Card>
         </div>
       </div>

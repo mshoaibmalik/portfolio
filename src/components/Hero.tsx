@@ -36,10 +36,6 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <Button size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download Resume
-            </Button>
             <Button size="lg" variant="outline" className="gap-2" asChild>
               <a href="https://github.com/mshoaibmalik" target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />

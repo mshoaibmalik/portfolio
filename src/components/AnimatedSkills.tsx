@@ -5,15 +5,17 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 const skills = [
-  { name: "React", level: 90, category: "Frontend" },
-  { name: "TypeScript", level: 80, category: "Frontend" },
-  { name: "Tailwind CSS", level: 88, category: "Frontend" },
-  { name: "JavaScript", level: 92, category: "Frontend" },
-  { name: "Node.js", level: 75, category: "Backend" },
-  { name: "Express.js", level: 70, category: "Backend" },
-  { name: "Python", level: 65, category: "Backend" },
-  { name: "MongoDB", level: 68, category: "Backend" },
-  { name: "Git", level: 85, category: "Tools" }
+  { name: "React", level: 90, category: "Frontend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Next.js", level: 85, category: "Frontend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "TypeScript", level: 80, category: "Frontend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Tailwind CSS", level: 88, category: "Frontend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "JavaScript", level: 92, category: "Frontend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Node.js", level: 75, category: "Backend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Express.js", level: 70, category: "Backend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Python", level: 65, category: "Backend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "MongoDB", level: 68, category: "Backend", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Git", level: 85, category: "Tools", githubUrl: "https://github.com/mshoaibmalik" },
+  { name: "Github", level: 75, category: "Tools", githubUrl: "https://github.com/mshoaibmalik" }
 ]
 
 const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => {
@@ -122,7 +124,7 @@ export default function AnimatedSkills() {
             <div className="text-sm text-gray-600">Expert Skills</div>
           </Card>
           <Card className="text-center p-6 bg-white/80 backdrop-blur-sm border border-gray-100">
-            <div className="text-2xl font-bold text-blue-600 mb-1">4</div>
+            <div className="text-2xl font-bold text-blue-600 mb-1">5</div>
             <div className="text-sm text-gray-600">Advanced Skills</div>
           </Card>
           <Card className="text-center p-6 bg-white/80 backdrop-blur-sm border border-gray-100">
@@ -130,7 +132,7 @@ export default function AnimatedSkills() {
             <div className="text-sm text-gray-600">Intermediate Skills</div>
           </Card>
           <Card className="text-center p-6 bg-white/80 backdrop-blur-sm border border-gray-100">
-            <div className="text-2xl font-bold text-purple-600 mb-1">12</div>
+            <div className="text-2xl font-bold text-purple-600 mb-1">13</div>
             <div className="text-sm text-gray-600">Total Technologies</div>
           </Card>
         </div>
